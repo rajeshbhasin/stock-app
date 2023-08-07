@@ -4,4 +4,4 @@ In this project I create a simple Stock app to view the current stock prices giv
 
 ## Demo
 
-![Stock app sample](./Tesla.png)
+<img src="./Tesla.png" width="400" height="200" />
