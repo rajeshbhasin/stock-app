@@ -1,2 +1,1 @@
-# stock-app
-Stock app I created to show the stock related data with ReactJS/OpenAPI
+In this project I create a simple Stock app to view the current stock prices given the stock ticker.I use Yahoo finance APIs to fetch this data.I also integrate news results related to the ticker using Yahoo finance API and plot a graph of the latest price trend.I have also added a spinner which shows up till the content is loaded.It also has basic error handling for incorrect entry of data.
