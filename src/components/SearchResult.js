@@ -74,15 +74,20 @@ function SearchResult({ stockData }) {
           <h1 className={newsStyles.newsTitle}>News Results</h1>
           <div className={newsStyles.container}>
             <div className={newsStyles.imgBox}>
-              {stockData.news[0].thumbnail ? (
+              {stockData.news[0].thumbnail && stockData.news[0].thumbnail.resolutions?(
                 <img
                   width="60px"
                   height="60px"
-                  src={stockData.news[0].thumbnail.resolutions[1].url}
+                  src={stockData.news[0].thumbnail.resolutions[0].url}
                   alt="Article"
                 />
               ) : (
-                ''
+                <img
+                width="60px"
+                height="60px"
+                src={"https://upload.wikimedia.org/wikipedia/commons/d/d7/Philippine-stock-market-board.jpg"}
+                alt="Article"
+              />
               )}
             </div>
             <div className={newsStyles.text}>
@@ -97,15 +102,20 @@ function SearchResult({ stockData }) {
           </div>
           <div className={newsStyles.container}>
             <div className={newsStyles.imgBox}>
-              {stockData.news[1].thumbnail ? (
+              {stockData.news[1].thumbnail && stockData.news[1].thumbnail.resolutions ? (
                 <img
                   width="60px"
                   height="60px"
-                  src={stockData.news[1].thumbnail.resolutions[1].url}
+                  src={stockData.news[1].thumbnail.resolutions[0].url}
                   alt="Article"
                 />
               ) : (
-                ''
+                <img
+                width="60px"
+                height="60px"
+                src={"https://upload.wikimedia.org/wikipedia/commons/d/d7/Philippine-stock-market-board.jpg"}
+                alt="Article"
+              />
               )}
             </div>
             <div className={newsStyles.text}>
@@ -120,16 +130,23 @@ function SearchResult({ stockData }) {
           </div>
           <div className={newsStyles.container}>
             <div className={newsStyles.imgBox}>
-              {stockData.news[2].thumbnail ? (
+              {stockData.news[2].thumbnail && stockData.news[2].thumbnail.resolutions?
+               (
+                
                 <img
                   width="60px"
                   height="60px"
-                  src={stockData.news[2].thumbnail.resolutions[1].url}
+                  src={stockData.news[2].thumbnail.resolutions[0].url}
                   alt="Article"
                 />
               ) : (
-                ''
-              )}
+                <img
+                width="60px"
+                height="60px"
+                src={"https://upload.wikimedia.org/wikipedia/commons/d/d7/Philippine-stock-market-board.jpg"}
+                alt="Article"
+              />
+                )}
             </div>
             <div className={newsStyles.text}>
               <a className={newsStyles.link} href={stockData.news[2].link}>
@@ -144,15 +161,20 @@ function SearchResult({ stockData }) {
 
           <div className={newsStyles.container}>
             <div className={newsStyles.imgBox}>
-              {stockData.news[3].thumbnail ? (
+              {stockData.news[3].thumbnail &&  stockData.news[3].thumbnail.resolutions? (
                 <img
                   width="60px"
                   height="60px"
-                  src={stockData.news[3].thumbnail.resolutions[1].url}
+                  src={stockData.news[3].thumbnail.resolutions[0].url}
                   alt="Article"
                 />
               ) : (
-                ''
+                <img
+                width="60px"
+                height="60px"
+                src={"https://upload.wikimedia.org/wikipedia/commons/d/d7/Philippine-stock-market-board.jpg"}
+                alt="Article"
+              />
               )}
             </div>
             <div className={newsStyles.text}>
