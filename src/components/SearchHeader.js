@@ -65,10 +65,10 @@ function SearchHeader() {
       );
       var timestamps = historicalValues['timestamp'];
       const prices = historicalValues['indicators']['quote'][0]['close'];
-
-      //Convert timestamps to date
+      console.log(timestamps)
+      //Convert timestamps to date - and then the timezone to New York
       timestamps = timestamps.map((stamp) => {
-        var d = new Date(stamp * 1000);
+        var d = new Date(stamp * 1000 + (3600000*-9.5));
         return d.getDate() + ' ' + month_names_short[d.getMonth()];
       });
       var stockChartXValues = timestamps;
