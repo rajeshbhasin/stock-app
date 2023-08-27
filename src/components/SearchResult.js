@@ -5,7 +5,7 @@ import Graph from './Graph';
 
 function SearchResult({ stockData }) {
   return (
-    <div>
+    <div className={styles.flexBox}>
       <div className={styles.box}>
         <img
           src={stockData.imageURL}

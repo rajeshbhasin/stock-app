@@ -1,80 +1,69 @@
-@import '../_mixins.scss';
 
-.item {
+.form {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 1rem;
+  align-items: justify;
+  padding: 2rem;
   background: var(--white);
   margin-bottom: 1.5rem;
   border-radius: 4px;
   &:last-child {
     margin-bottom: 0;
   }
-}
-.todoDetails {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  gap: 1rem;
+  border: 1px solid peru;
 }
 
-.texts {
-  display: flex;
-  flex-direction: column;
-  overflow: hidden;
+.content__wrapper {
+  background-color: var(--bg-2);
+  padding: 1rem;
+  border-radius: 12px;
+  display:block;
+  border: 1px solid grey;
+  overflow: auto;
 }
+
 .todoText {
   word-break: break-all;
   font-weight: 500;
   font-size: 1.4rem;
   color: var(--black-2);
+  flex-basis: 10%;
 
-  &--completed {
-    text-decoration: line-through;
-    opacity: 0.7;
+}
+
+.todoInput{
+  flex-basis:15%;
+  margin-right: 5rem;
+}
+
+@media (max-width: 500px){
+  .content__wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
-}
-.time {
-  display: block;
-  font-size: 1.2rem;
-  font-weight: 300;
-  margin-top: -0.2rem;
-  color: var(--black-2);
-}
-.todoActions {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 1rem;
-}
-.icon {
-  font-size: 2rem;
-  padding: 0.5rem;
-  border-radius: 4px;
-  background-color: var(--gray-1);
-  color: var(--black-2);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  transition: 0.3s ease background-color;
-  &:hover {
-    background-color: var(--gray-2);
+
+  .todoText{
+    flex-basis:100%;
+    border-right:0;
+    border-left:0;
   }
-}
-.content__wrapper {
-  background-color: var(--bg-2);
-  padding: 2rem;
-  border-radius: 12px;
-  @include smallDeviceSize {
-    padding: 1.5rem;
+  .todoInput{
+    margin-right: 0rem;
+    margin-bottom: 0.8rem;
   }
+  .form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width:100%;
+    object-fit:contain;
+    overflow:auto
+
+  }
+
 }
-.titleText {
-  word-break: break-all;
-  font-weight: 500;
-  align-items: center;
-  font-size: 1.4rem;
-  color: var(--black-2);
-}
+
+
+

@@ -106,10 +106,9 @@ function SearchHeader() {
 
   return (
     <div className={styles.content__wrapper}>
-      <form className={styles.item} onSubmit={(e) => handleSubmit(e)}>
-        <div className={styles.todoDetails}>
+      <form className={styles.form} onSubmit={(e) => handleSubmit(e)}>
           <h2 className={styles.todoText}>Enter Symbol </h2>
-          <input
+          <input className={styles.todoInput}
             type="text"
             placeholder="Stock symbol here"
             id="symbol"
@@ -118,8 +117,6 @@ function SearchHeader() {
               setSymbol(e.target.value);
             }}
           />
-        </div>
-        <div className={styles.todoActions}>
           <button
             className={getClasses([
               buttonStyles.button,
@@ -135,7 +132,6 @@ function SearchHeader() {
           >
             Clear
           </button>
-        </div>
       </form>
       {showResult && <SearchResult stockData={stockData} />}
       {showResult && (

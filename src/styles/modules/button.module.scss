@@ -6,6 +6,7 @@
   border-radius: 6px;
   font-weight: 500;
   font-size: 1.6rem;
+  margin-right: 1rem;
   text-decoration: none;
   text-transform: capitalize;
   cursor: pointer;
@@ -25,4 +26,11 @@
 .buttonPrimary {
   background-color: var(--primaryPurple);
   color: var(--white);
+}
+
+@media (max-width: 500px){
+  .button {
+    flex-basis: 100%;
+    margin-bottom: 0.8rem;
+  }
 }
